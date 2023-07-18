@@ -1,36 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
-/*
- *
- * main Function - Entry
- *
- * Description: program that prints _putchar
- * followed by a new line.
- *
- * returns 0
- */int main(void)
+/**
+ * main -  prints _putchar, followed by a new line
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-        char result[8];
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
-        other(result);
-        printf("%s\n", result);
-
-        return (0);
-
-}
-
-/*
- * other Function Definition
- *
- */void other(char out[])
-{
-        char s[] = "_putchar";
-        int i = 0;
-
-        for (; s[i] != '\0'; i++)
-        {
-                out[i] = s[i];
-        }
-        out[i] = '\0';
+	return (0);
 }
