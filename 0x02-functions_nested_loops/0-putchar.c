@@ -1,21 +1,36 @@
-#include"main.h"
+#include "main.h"
+#include <stdio.h>
 
-/**
- * main - Entry point
+/*
  *
- * Description: prints _putchar using putchar prototype
+ * main Function - Entry
  *
- * Return: Always 0 (Success)
-*/
-
-int main(void)
+ * Description: program that prints _putchar
+ * followed by a new line.
+ *
+ * returns 0
+ */int main(void)
 {
-	char str[] = "_putchar";
-	int ch;
+        char result[8];
 
-	for (ch = 0; ch < 8; ++ch)
-		_putchar(str[ch]);
-	_putchar('\n');
+        other(result);
+        printf("%s\n", result);
 
-	return (0);
+        return (0);
+
+}
+
+/*
+ * other Function Definition
+ *
+ */void other(char out[])
+{
+        char s[] = "_putchar";
+        int i = 0;
+
+        for (; s[i] != '\0'; i++)
+        {
+                out[i] = s[i];
+        }
+        out[i] = '\0';
 }
