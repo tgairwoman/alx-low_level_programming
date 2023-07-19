@@ -1,46 +1,47 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_times_table - prints tables times
- * @n: int to number
- *
- * return: none
+ * print_times_table - prints the n times table, starting with 0
+ * @n: number of the times table
  */
-
 void print_times_table(int n)
 {
-	int mul, count, res;
+	int i, j, k;
 
-	if (n <= 15 && n >= 0)
+	if (n >= 0 && n <= 15)
 	{
-		for (mul = 0; mul <= n; mul++)
+		for (i = 0; i <= n; i++)
 		{
-			for (count = 0; count <= n; count++)
+			for (j = 0; j <= n; j++)
 			{
-				res = mul * count;
-				if (res > 9)
+				k = j * i;
+				if (j == 0)
 				{
-					if (res > 99)
-					{
-						_putchar(32), _putchar((res / 10) / 10 + '0');
-						_putchar((res % 100) / 10 + '0'), _putchar(res % 10 + '0');
-					}
-					else
-					{
-						_putchar(32), _putchar(32);
-						_putchar(res / 10 + '0'), _putchar(res % 10 + '0');
-					}
-				}
-				else
+					_putchar(k + '0');
+				} else if (k < 10 && j != 0)
 				{
-					if (count != 0)
-						_putchar(32), _putchar(32), _putchar(32);
-					_putchar(res + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(k + '0');
+				} else if (k >= 10 && k < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
+				} else if (k >= 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((k / 100) + '0');
+					_putchar(((k / 10) % 10) + '0');
+					_putchar((k % 10) + '0');
 				}
-				if (count != n)
-					_putchar(44);
 			}
-			_putchar(10);
+			_putchar('\n');
 		}
 	}
 }
