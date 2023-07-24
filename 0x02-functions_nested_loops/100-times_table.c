@@ -2,10 +2,13 @@
 
 /**
  * print_times_table - prints the n times table, starting with 0
- * @n: number of the times table
+ * @n: the highest multiplier to print (0 <= n <= 15)
+ *
+ * Return: void
  */
 void print_times_table(int n)
 {
+<<<<<<< HEAD
 int i, j, k;
 if (n >= 0 && n <= 15)
 {
@@ -41,6 +44,5 @@ _putchar((k % 10) + '0');
 }
 }
 _putchar('\n');
-}
 }
 }
