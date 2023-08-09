@@ -74,7 +74,8 @@ char **strtow(char *str)
 	matrix[k] = NULL;
 
 	return (matrix);
-}#include <stdlib.h>
+}
+#include <stdlib.h>
 #include "main.h"
 
 /**
