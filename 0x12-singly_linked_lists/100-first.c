@@ -8,6 +8,6 @@ void first(void) __attribute__ ((constructor));
  */
 void first(void)
 {
-	printf("Before the main function is executed, this message is display.\n");
-	printf("Welcome to the program!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
